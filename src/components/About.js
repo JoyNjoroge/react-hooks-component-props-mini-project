@@ -1,17 +1,10 @@
 import React from "react";
 
-function About(props) {
-    let blogImage;
-    if (props.image) {
-        blogImage = <img src={props.image} alt="blog logo" />;
-    } else {
-        blogImage = <img src="https://via.placeholder.com/215" alt="blog logo" />;
-    }
-
+function About({ image = "https://via.placeholder.com/215", about }) {
     return (
         <aside>
-            {blogImage}
-            <p>{props.about}</p>
+            <img src={image} alt="blog logo" />
+            <p>{about}</p>
         </aside>
     );
 }
